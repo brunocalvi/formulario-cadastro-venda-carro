@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Veículos</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+</head>
+<body>
+    <nav id="title-top">
+        <h3>Cadastre seu veículo para vender muito mais rápido!</h3>
+    </nav>
+
+    <section class="form-container">
+        <header class="container">
+            <p id="title-center">CADASTRO</p>
+            <h1>Venda fácil seu veículo!</h1>
+            <p>Descreva as características do seu veículo e marque todas os opicionais e características que ele possui</p>
+        </header>
+
+        <form action="dados-cadastro.php" method="POST" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label for="title">Título do anúncio: <span class="obrigatorio">*</span></label>
+                <input type="text" name="title" id="title" class="input-text" placeholder="Defina um título para o seu veiculo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="price">Preço do veículo: <span class="obrigatorio">*</span></label>
+                <input type="number" name="price" id="price" class="input-text" required>
+            </div>
+
+            <div class="form-group-textarea">
+                <label for="description">Descrição: <span class="obrigatorio">*</span></label>
+                <textarea name="description" id="description" class="text-description" rows="10" cols="60" placeholder="Digite caracterisiticas do carro ..." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Único dono: <span class="obrigatorio">*</span></label>
+                <select required>
+                    <option>Selecione ...</option>
+                    <option value="S">Sim</option>
+                    <option value="N">Não</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="brand">Marca: <span class="obrigatorio">*</span></label>
+                <input type="text" name="brand" id="brand" class="input-text" placeholder="Digite a marca do seu veiculo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="model">Modelo: <span class="obrigatorio">*</span></label>
+                <input type="text" name="model" id="model" class="input-text" placeholder="Digite o modelo do seu veiculo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mileage">Quilometragem: <span class="obrigatorio">*</span></label>
+                <input type="number" name="mileage" id="mileage" class="input-text" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mileage">Data de compra do veículo: <span class="obrigatorio">*</span></label>
+                <input type="date" name="date" id="date" class="input-text" required>
+            </div>
+
+            <div class="form-group">
+                <p>Câmbio:</p>
+                <input type="radio" name="cambio" id="manual" class="ckeck-exchange" value="M">
+                <label for="manual">Manual</label> 
+                <input type="radio" name="cambio" id="auto" class="ckeck-exchange" value="A">
+                <label for="auto">Altomatico</label> 
+            </div>
+
+            <div class="form-group">
+                <p>Opicionais:</p>
+                <div class="list-option">
+                    <ul>
+                        <li><input type="checkbox" id="airbag" name="optional[]" value="airbag"><label>Airbag</label></li>
+                        <li><input type="checkbox" id="alarme" name="optional[]" value="alarme"><label>Alarme</label></li>
+                        <li><input type="checkbox" id="ar-condicionado" name="optional[]" value="ar-condicionado"><label>Ar Condicionado</label></li>
+                        <li><input type="checkbox" id="trava-eletrica" name="optional[]" value="trava-eletrica"><label>Trava elétrica</label></li>
+                    </ul>
+                    <ul>
+                        <li><input type="checkbox" id="vidro-eletrico" name="optional[]" value="vidro-eletrico"><label>Vidro elétrico</label></li>
+                        <li><input type="checkbox" id="som" name="optional[]" value="som"><label>Som</label></li>
+                        <li><input type="checkbox" id="camera-re" name="optional[]" value="camera-re"><label>Câmera de Ré</label></li>
+                        <li><input type="checkbox" id="banco-couro" name="optional[]" value="banco-couro"><label>Banco de Couro</label></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="">Envie imagens do veículo: <span class="obrigatorio">*</span></label>
+                <input type="file" name="file" id="file" class="input-text" required>
+            </div>
+
+            <div class="form-btn">
+                <input class="button" type="submit" value="CADASTRAR">
+            </div>
+
+        </form>
+    </section>
+
+    <footer>
+        <p>Copyright © Todos os direitos reservados 2022</p>
+    </footer>
+    
+    
+</body>
+</html>
